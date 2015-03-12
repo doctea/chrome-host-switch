@@ -128,7 +128,7 @@ $(function () {
         tbody.find('tr').remove();
         //@todo 改进使用 模板引擎
         if (result.length == 0) {
-            tbody.append('<tr><td colspan="3">没有结果</td></tr>');
+            tbody.append('<tr><td colspan="3">No results</td></tr>');
         } else {
             $(result).each(function (i, v) {
                 var tags = '<td>&nbsp;</td>';
@@ -144,7 +144,7 @@ $(function () {
                 //<a href="#" data-toggle="tooltip" title="" data-original-title="Default tooltip">you probably</a>
 
                 //@todo 激活点击图标就ok了
-                tbody.append('<tr  title="备注:' + v.note + ' 更新时间:' + v.uptime + '"   id="host-' + v.id + '" data-id="' + v.id + '"><td><input name="id[]" value="' + v.id + '" type="checkbox"></td><td><a  class="a-host-status" href="#"><span data-status="'+ v.status+'"  data-id="' + v.id + '"  class="host-status glyphicon glyphicon-ok ' + status + '"  ></span></a></td></td><td>' + v.ip + '</td><td>' + v.domain + '</td>' + tags + '</tr>');
+                tbody.append('<tr  title="Remark:' + v.note + ' Updated:' + v.uptime + '"   id="host-' + v.id + '" data-id="' + v.id + '"><td><input name="id[]" value="' + v.id + '" type="checkbox"></td><td><a  class="a-host-status" href="#"><span data-status="'+ v.status+'"  data-id="' + v.id + '"  class="host-status glyphicon glyphicon-ok ' + status + '"  ></span></a></td></td><td>' + v.ip + '</td><td>' + v.domain + '</td>' + tags + '</tr>');
 
 
             })
@@ -222,7 +222,7 @@ $(function () {
 
         //保存操作
         if ($('#add').is(":visible")) {
-            console.log('普通添加模式');
+            console.log('Ordinary add mode');
             var info = {
                 'ip': $('#ip').val(),
                 'domain': $('#domain').val(),
@@ -250,7 +250,7 @@ $(function () {
             setTimeout(search, 0);
 
         } else {
-            console.log('批量添加模式');
+            console.log('Bulk add mode');
         }
 
     })

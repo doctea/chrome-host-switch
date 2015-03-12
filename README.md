@@ -1,24 +1,24 @@
 Host-switch
 
-域名ip切换工具:
+Ip domain switching tools:
 
-基于 代理pac 自动切换一个域名的ip,而不用修改 hosts,
-方便web开发人员在 各种/测试/开发/线上 环境快速切换
+Automatic switch -based proxy pac a domain name ip, without modifying hosts,
+Convenient web developers to quickly switch between different / test / development / online environment
 
-可以先设置 ip别名
+Can set ip alias
 
-比如:
+Such as:
 ```
 127.0.0.1 web1
 127.0.0.2 web2
 
-#如果是 其他非80 端口的,增加端口即可
+# If other non- port 80 , the port can be increased
 
 192.168.1.100 www.test.com:8888
 
 ```
-然后访问 http://www.test.com:8888/ 即 指向 127.0.0.1:8888
-然后在设置
+Then visit http://www.test.com:8888/ that points 127.0.0.1:8888
+then set
 ```
 web1   www.xyz.com
 web1   *.abc.com
